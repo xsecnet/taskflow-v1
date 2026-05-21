@@ -1,0 +1,49 @@
+# ===========================================================================
+# Secret & env — JANGAN PERNAH DI-COMMIT
+# ===========================================================================
+.env
+.env.*
+!.env.example
+!.env.production.example
+
+# Backup database & uploads
+backups/
+uploads/
+
+# ===========================================================================
+# Node / build
+# ===========================================================================
+node_modules/
+dist/
+*.log
+.npm/
+*.tsbuildinfo
+
+# Backend
+backend/node_modules/
+backend/dist/
+backend/uploads/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# Prisma — migrations DI-COMMIT, generated client TIDAK
+backend/node_modules/.prisma
+backend/node_modules/@prisma
+
+# ===========================================================================
+# Editor / OS
+# ===========================================================================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ===========================================================================
+# Lock file pribadi (opsional — kalau pakai npm, tetap commit package-lock)
+# ===========================================================================
+# yarn.lock
+# pnpm-lock.yaml
